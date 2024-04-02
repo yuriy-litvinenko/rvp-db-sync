@@ -1,0 +1,14 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  datasource:
+    common:
+      jdbc-url: jdbc:postgresql://${DB_COMMON_HOST}:${DB_COMMON_PORT}/${DB_COMMON_NAME}
+      username: ${DB_COMMON_USER}
+      password: ${DB_COMMON_PASS}
+    target:
+      jdbc-url: jdbc:postgresql://${DB_TARGET_HOST}:${DB_TARGET_PORT}/${DB_TARGET_NAME}
+      username: ${DB_TARGET_USER}
+      password: ${DB_TARGET_PASS}
+#  jpa:
+#    show-sql: true
